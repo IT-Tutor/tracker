@@ -4,6 +4,7 @@ import flask
 from flask import Flask, session
 
 
+
 class number(object):
     def __init__(self):
         self.number = 0
@@ -17,9 +18,6 @@ class number(object):
 app = Flask(__name__)
 visitors = {}
 init_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-
-
 totalvisits = number()
 
 @app.route('/')
@@ -30,7 +28,7 @@ def dashboard():
     total = totalvisits.get_number()
 
     print(total)
-    print(unique_visitors)
+    print(visitors)
 
     return flask.render_template('dashboard.html', totalvisits=total, unique_visitors=unique_visitors, init_time=init_time)
 
