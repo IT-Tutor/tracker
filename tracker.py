@@ -29,6 +29,9 @@ def dashboard():
     unique_visitors = len(visitors)
     total = totalvisits.get_number()
 
+    print(total)
+    print(unique_visitors)
+
     return flask.render_template('dashboard.html', totalvisits=total, unique_visitors=unique_visitors, init_time=init_time)
 
 
