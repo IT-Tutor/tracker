@@ -30,7 +30,7 @@ def dashboard():
     print(total)
     print(visitors)
 
-    return flask.render_template('dashboard.html', totalvisits=total, unique_visitors=unique_visitors, init_time=init_time)
+    return flask.render_template('dashboard.html', visitors=visitors, totalvisits=total, unique_visitors=unique_visitors, init_time=init_time)
 
 
 @app.route('/track')
